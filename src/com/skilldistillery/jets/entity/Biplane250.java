@@ -4,9 +4,8 @@ public class Biplane250 extends Jet implements CargoCarrier {
 	protected int oneBagOrTwo;
 
 
-public Biplane250(String model, int speed, int range, double price, int oneBagOrTwo) {
+public Biplane250(String model, int speed, int range, double price) {
 	super(model, speed, range, price);
-	this.oneBagOrTwo = oneBagOrTwo;
 }
 
 @Override
@@ -16,16 +15,7 @@ public void fly() {
 	
 }
 public void loadCargo() {
-	System.out.println(getModel() + " now deciding if each guest can bring one bag or two: " + getOneBagOrTwo() + " bags.");
+	System.out.println(getModel() + " now initiating cargo load to max load capacity ");
 }
-
-public int getOneBagOrTwo() {
-	return oneBagOrTwo;
-}
-
-public void setOneBagOrTwo(int oneBagOrTwo) {
-	this.oneBagOrTwo = oneBagOrTwo;
-}
-
 
 }

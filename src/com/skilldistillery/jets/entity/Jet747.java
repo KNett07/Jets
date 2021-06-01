@@ -3,9 +3,8 @@ package com.skilldistillery.jets.entity;
 public class Jet747 extends Jet implements CargoCarrier {
 	protected int warpSpeed;
 	
-	public Jet747(String model, int speed, int range, double price, int warpSpeed) {
+	public Jet747(String model, int speed, int range, double price) {
 		super(model, speed, range, price);
-		this.warpSpeed = warpSpeed;
 	}
 	
 	@Override
@@ -16,12 +15,9 @@ public class Jet747 extends Jet implements CargoCarrier {
 	
 	@Override
 	public void loadCargo() {
-		System.out.println(getModel() + " now initiating warp speed with a booster of " + getWarpSpeed() + " per second." );
+		System.out.println(getModel() + " now initiating warp speed with a booster of "  + " per second." );
 	}
 
-	public int getWarpSpeed() {
-		return warpSpeed;
-	}
 
 	public void setWarpSpeed(int warpSpeed) {
 		this.warpSpeed = warpSpeed;

@@ -16,11 +16,11 @@ public void fly() {
 }
 
 
-@Override
-public String toString() {
-	return "The information for this Jet [Model: " + getModel() + ", Speed: " + getSpeed() + ", Range:" + getRange() + ", Price; " + getPrice() + " thousand ";
+//@Override
+//public String toString() {
+//	return "The information for this Jet [Model: " + getModel() + ", Speed: " + getSpeed() + ", Range:" + getRange() + ", Price; " + getPrice() + " thousand ";
 		
  
-}
+//}
 
 }
