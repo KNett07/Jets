@@ -1,21 +1,22 @@
 package com.skilldistillery.jets.entity;
 
 public class Biplane250 extends Jet implements CargoCarrier {
-	protected int oneBagOrTwo;
 
+	public Biplane250(String model, int speed, int range, double price) {
+		super(model, speed, range, price);
+	}
 
-public Biplane250(String model, int speed, int range, double price) {
-	super(model, speed, range, price);
-}
+	@Override
+	public void fly() {
+		double distance = (getRange() / getSpeed());
+		System.out.println(toString());
+		System.out.println("This biplane can travel at a top speed of " + getSpeed() + " mph for "
+				+ distance + " miles without needing fuel.");
 
-@Override
-public void fly() {
-	System.out.println(toString());
-	System.out.println("This aircraft can travel at a top speed of " + getSpeed() + " for " + (getSpeed()/getRange()) + " hours.");
-	
-}
-public void loadCargo() {
-	System.out.println(getModel() + " now initiating cargo load to max load capacity ");
-}
+	}
+
+	public void loadCargo() {
+		System.out.println(getModel() + ": Does this thing fly on hopes and dreams?!");
+	}
 
 }

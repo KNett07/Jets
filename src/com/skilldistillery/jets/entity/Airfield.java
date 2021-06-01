@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Airfield {
 
 	List<Jet> jets1;
-	private Scanner kb = new Scanner(System.in);
 
 	public Airfield() {
 		jets1 = new ArrayList<>();
@@ -23,7 +22,7 @@ public class Airfield {
 	}
 
 	public void listFleet() {
-		System.out.println("This is the whole fleet: ");
+		System.out.println("Entire Current Fleet: ");
 
 		for (int i = 0; i < jets1.size(); i++) {
 			System.out.println(this.jets1.get(i).toString());
@@ -31,51 +30,6 @@ public class Airfield {
 
 		}
 	}
-//	public List<Jet> readJetsFromFile(String file) {
-//		List<Jet> jets = new ArrayList<Jet>();
-//		try 
-//			(BufferedReader bufIn = new BufferedReader(new FileReader(file))){
-//			Jet jet;
-//			String line;
-//			while ((line = bufIn.readLine()) != null) {
-//				String[] jetFields = line.split(",");
-//				String type = jetFields[0];
-//				String model = jetFields[1];
-//				int speed = Integer.parseInt(jetFields[2]);
-//				int range = Integer.parseInt(jetFields[3]);
-//				double price = Double.parseDouble(jetFields[4]);
-//				
-//				switch(type) {
-//				case "A":
-//					jet = new Jet747(model, speed, range, price);
-//					jets.add(jet);
-//					break;
-//				case "B":
-//					jet = new Balloon3000(model, speed, range, price);
-//					jets.add(jet);
-//					break;
-//				case "C":
-//					jet = new Biplane250(model, speed, range, price);
-//					jets.add(jet);
-//					break;
-//				case "D":
-//					jet = new CargoPlane(model, speed, range, price);
-//					jets.add(jet);
-//					break;
-//				case "E":
-//					jet = new Nimbus3000(model, speed, range, price);
-//					jets.add(jet);
-//					break;
-//					
-//				}
-//			}
-//			bufIn.close();
-//		} catch (IOException e) {
-//			System.out.println(e);
-//			
-//		}
-//		return jets;
-//	}
 
 	public void flyAllJets() {
 		for (int i = 0; i < jets1.size(); i++) {
@@ -147,11 +101,9 @@ public class Airfield {
 		String model = input.nextLine();
 		Jet jetToRemove = null;
 
-
 		for (Jet jet : jets1) {
 			if (model.equalsIgnoreCase(jet.getModel())) {
 				jetToRemove = jet;
-//			TODO add in catch for two jets same model name
 			}
 
 		}

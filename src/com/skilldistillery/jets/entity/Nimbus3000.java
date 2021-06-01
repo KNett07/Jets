@@ -1,30 +1,22 @@
 package com.skilldistillery.jets.entity;
 
 public class Nimbus3000 extends Jet implements FloatAway {
-	protected int soarRate;
 
+	public Nimbus3000(String model, int speed, int range, double price) {
+		super(model, speed, range, price);
+	}
 
-public Nimbus3000(String model, int speed, int range, double price) {
-	super(model, speed, range, price);
-}
+	@Override
+	public void fly() {
+		double distance = (getRange() / getSpeed());
+		System.out.println(toString());
+		System.out.println("This magic broom can travel at a top speed of " + getSpeed() + " mph for "
+				+ distance + " mile without needing another spell.");
+	}
 
-@Override
-public void fly() {
-	System.out.println(toString());
-	System.out.println("This magic broom can travel at a top speed of " + getSpeed() + " for " + (getSpeed()/getRange()) + " hours.");
-}
-@Override
-public void allFloat() {
-	System.out.println(getModel() + " now starting to float away at " + getSoarRate() + " per second!");
-}
-
-public int getSoarRate() {
-	return soarRate;
-}
-
-public void setSoarRate(int soarRate) {
-	this.soarRate = soarRate;
-}
-
+	@Override
+	public void allFloat() {
+		System.out.println(getModel() + ": Wingardium Leviosa!");
+	}
 
 }

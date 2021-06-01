@@ -20,7 +20,7 @@ public class JetsApplication {
 	protected int currentLength = 5;
 
 	public JetsApplication() {
-		
+
 	}
 
 	public static void main(String[] args) {
@@ -79,7 +79,7 @@ public class JetsApplication {
 	private void launch(Airfield af) {
 		input = new Scanner(System.in);
 		boolean notNine = true;
-		String choice; 
+		String choice;
 		while (notNine) {
 			mainMenu();
 			choice = input.nextLine();
@@ -109,112 +109,32 @@ public class JetsApplication {
 			case "8":
 				Jet jet3 = af.removeJetFromFleet(input);
 				af.removeJet(jet3);
-				
+
 				break;
 			case "9":
-				System.out.println("Thank you for visiting, goodbye!");
+				System.out.println("Thank you for visiting the Airfield, buh bye!");
 				notNine = false;
 				break;
-				
+
 			}
-			
-			
+
 		}
 
 	}
 
 	public void mainMenu() {
 		System.out.println("****Welcome to the Airfield, what would you like to do with your fleet?****");
-		System.out.println("\t1. List Fleet");
-		System.out.println("\t2. Fly all jets");
-		System.out.println("\t3. View fastest Jet");
-		System.out.println("\t4. View jet with longest range");
-		System.out.println("\t5. Load all Cargo Jets");
-		System.out.println("\t6. Float away!");
-		System.out.println("\t7. Add a jet to the Fleet");
-		System.out.println("\t8. Remove a jet from the Fleet");
-		System.out.println("\t9. Quit");
+		System.out.println("\t\t1. Fleet Details");
+		System.out.println("\t\t2. Fly the Fleet");
+		System.out.println("\t\t3. Fastest Jet");
+		System.out.println("\t\t4. Longest Range Jet");
+		System.out.println("\t\t5. Load all Cargo Jets");
+		System.out.println("\t\t6. Float away!");
+		System.out.println("\t\t7. Add to the Fleet");
+		System.out.println("\t\t8. Remove from the Fleet");
+		System.out.println("\t\t9. Quit");
+		System.out.println("****************************************************************************");
 
 	}
 
-//		for(int i = 0; i < jets.length; i++) {
-//			System.out.println("Model: " + jets[i].getModel() + "/nSpeed: " + jets[i].getSpeed() 
-//					+ "/nRange: " + jets[i].getRange() + "/nPrice: " + jets[i].getPrice());
-//			System.out.println();
-//		}
-
-//	}
-//
-//	private void flyAllJets() {
-//		for(int i = 0; i < jets.length; i++) {
-//			jets[i].fly();
-//		}
-//
-//	}
-//
-//	private void fastestJet() {
-//		Jet fastest = jets[0];
-//		for (int i = 1; 1 < jets.length; i++) {
-//			if (fastest.getSpeed() < jets[i].getSpeed()) {
-//				fastest = jets[i];
-//			}
-//		}
-//		System.out.println(fastest);
-//	}
-//
-//	private void longestRange() {
-//		Jet longest = jets[0];
-//		for (int i = 1; i < jets.length; i++) {
-//			if (longest.getRange() < jets[i].getRange()) {
-//				longest = jets[i];
-//			}
-//		}
-//		System.out.println(longest.toString());
-//	}
-//
-//	private void allCargoJets() {
-//		for(int i = 0; i < jets.length; i++) {
-//			if(jets[i] instanceof CargoCarrier) {
-//				((CargoPlane) jets[i]).loadCargo();
-//			}
-//		}
-//
-//	}
-//
-//	private void allFloatAway() {
-//		for(int i = 0; i < jets.length; i++) {
-//			if(jets[i] instanceof FloatAway) {
-//				((Balloon3000) jets[i]).allFloat();
-//			}
-//		}
-//		
-//
-//	}
-//
-//	private Jet addJetToFleet() {
-//		int range, speed;
-//		double price;
-//		String model;
-//		System.out.println("Please enter a model: ");
-//		model = input.next();
-//		System.out.println("Please enter a speed: ");
-//		speed = input.nextInt();
-//		System.out.println("Please enter a range: ");
-//		range = input.nextInt();
-//		System.out.println("Please enter a price: ");
-//		price = input.nextDouble();
-//		Jet jet = new JetImpl(model, speed, range, price);
-//		return jet;
-//		
-//
-//	}
-//
-//	private void removeJetFromFleet() {
-//		System.out.println("Enter the model of jet you would like to remove: ");
-//		for(Jet jet : airfield.getFlyAllJets()) {
-//			airfield.getFlyAllJets().remove(jet);
-
 }
-//		System.out.println("");
-//
-//	}
