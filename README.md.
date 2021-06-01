@@ -1,4 +1,42 @@
 #Jets Project
+
+This program allows a user to view information on a fleet of Jets, and allows
+the user to update their inventory by adding and removing a Jet and then
+viewing the new fleet. The user can also queue up Jets of a certain type by
+selecting Cargo or Float. Everything beyond the user's choice is handled by this
+detailed java program.
+
 #Overview
+
+A looping menu presents the user with nine options. Behind the scenes there is
+an abstract super class, Jet, and several subclasses representing different types
+of Jets. The menu selection dictates which pieces of the Airfield inventory
+are displayed. For example, the faster Jet, or seeing a new Jet added to the
+list. The user can use the program repeatedly until Quit is selected.
+
+The majority of the logic here revolves around searching through the current
+inventory of information after each selected is made so that
+unnecessary information does not appear, and all calculations are correct.
+
 #Technologies Used
+
+-Superclass and Subclass
+-Interfaces
+-Inheritance
+-Polymorphism
+-Abstraction
+-Encapsulation
+
+#How to Run This Project
+
+This program can be initiated using Eclipse by running the JetsApplication
+class inside the Jets Project. User input is required to initiate program
+commands. The program ends after the user chooses Quit.
+
 #Lessons Learned
+
+This is the biggest learning experience I have had in this program thus far.
+The combination of keeping code DRY with the larger lesson of making proper
+methods visible to their parent classes and interfaces has become much more
+clear. This is the first time I was able to go back and play with stretch goals
+and the accomplishment was so satisfying.
